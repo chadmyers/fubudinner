@@ -1,0 +1,14 @@
+TestResult.xml
+build
+obj
+bin
+deploy
+deploy/*
+src/CommonAssemblyInfo.cs
+_ReSharper.*
+*.csproj.user
+*.resharper.user
+*.resharper
+*.suo
+*.cache
+~$*
