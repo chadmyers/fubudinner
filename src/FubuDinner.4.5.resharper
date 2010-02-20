@@ -1,0 +1,16 @@
+<Configuration>
+  <SharedSolutionTemplateManager>
+    <LiveTemplates>
+      <Template uid="ec03964d-2f80-495b-9499-d78b5473e47d" shortcut="pvt" description="NNew Test Case" text="[Test]&#xD;&#xA;public void $TESTNAME$()&#xD;&#xA;{&#xD;&#xA;	$END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+        <Context>
+          <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+        </Context>
+        <Categories />
+        <Variables>
+          <Variable name="TESTNAME" expression="" initialRange="0" />
+        </Variables>
+        <CustomProperties />
+      </Template>
+    </LiveTemplates>
+  </SharedSolutionTemplateManager>
+</Configuration>

@@ -1,7 +1,6 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubuDinner.Web", "FubuMVC.NerdDinner.Web\FubuDinner.Web.csproj", "{0D7B191E-2AA4-4CF0-BDE1-3B7B680F23F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubuDinner.Web", "FubuDinner.Web\FubuDinner.Web.csproj", "{0D7B191E-2AA4-4CF0-BDE1-3B7B680F23F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubuDinner.Test", "FubuDinner.Test\FubuDinner.Test.csproj", "{233B7C0E-0D73-4268-A7F5-9738ED407C52}"
 EndProject
