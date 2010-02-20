@@ -73,7 +73,7 @@
     <Compile Include="SpecificationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FubuMVC.NerdDinner.Web\FubuDinner.Web.csproj">
+    <ProjectReference Include="..\FubuDinner.Web\FubuDinner.Web.csproj">
       <Project>{0D7B191E-2AA4-4CF0-BDE1-3B7B680F23F4}</Project>
       <Name>FubuDinner.Web</Name>
     </ProjectReference>
