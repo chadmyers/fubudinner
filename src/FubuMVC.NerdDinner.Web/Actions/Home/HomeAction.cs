@@ -1,25 +1,20 @@
 using FubuMVC.Core.View;
 
-namespace FubuMVC.NerdDinner.Web.Actions.Home
+namespace FubuDinner.Web.Actions.Home
 {
     public class HomeAction
     {
-        public HomeViewModel Home(HomeInputModel input)
+        public HomeModel Execute(HomeModel input)
         {
-            return new HomeViewModel();
+            return new HomeModel();
         }
     }
 
-    public class Home : FubuPage<HomeViewModel>
-    {
-        
-    }
-
-    public class HomeInputModel
+    public class Home : FubuPage<HomeModel>
     {
     }
 
-    public class HomeViewModel
+    public class HomeModel
     {
     }
 }

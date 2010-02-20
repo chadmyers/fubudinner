@@ -1,10 +1,9 @@
-﻿using System;
-using System.Web;
+﻿using System.Web;
 using System.Web.Routing;
 using FubuMVC.Core;
-using FubuMVC.NerdDinner.Web.Bootstrap;
+using FubuDinner.Web.Infrastructure.Bootstrap;
 
-namespace FubuMVC.NerdDinner.Web
+namespace FubuDinner.Web
 {
     public class Global : HttpApplication
     {
@@ -36,6 +35,6 @@ namespace FubuMVC.NerdDinner.Web
         private bool isAjaxRequest()
         {
             return HttpContext.Current.IsAjaxRequest();
-        } 
+        }
     }
 }

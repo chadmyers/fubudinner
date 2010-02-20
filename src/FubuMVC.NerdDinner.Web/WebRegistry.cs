@@ -1,7 +1,10 @@
+using System;
 using FubuMVC.Core;
-using FubuMVC.NerdDinner.Web.Actions.Home;
+using FubuDinner.Web.Actions.Home;
+using FubuDinner.Web.Infrastructure.Behaviors;
+using FubuMVC.UI;
 
-namespace FubuMVC.NerdDinner.Web
+namespace FubuDinner.Web
 {
     public class WebRegistry : FubuRegistry
     {
@@ -16,6 +19,10 @@ namespace FubuMVC.NerdDinner.Web
 
             Routes
                 .IgnoreControllerNamespaceEntirely()
+                .IgnoreClassSuffix("Action")
+                .IgnoreMethodsNamed("Execute")
+                .IgnoreMethodSuffix("Command")
+                .IgnoreMethodSuffix("Query")
                 .ConstrainToHttpMethod(action => action.Method.Name.EndsWith("Command"), "POST")
                 .ConstrainToHttpMethod(action => action.Method.Name.StartsWith("Query"), "GET");
 
@@ -27,7 +34,27 @@ namespace FubuMVC.NerdDinner.Web
                     x.by_ViewModel();
                 });
 
-            HomeIs<HomeInputModel>();
+            this.HtmlConvention<NerdHtmlConventions>();
+
+            this.StringConversions(x =>
+            {
+                x.IfIsType<DateTime>(d => d.ToString("g"));
+                x.IfIsType<decimal>(d => d.ToString("N2"));
+                x.IfIsType<float>(f => f.ToString("N2"));
+                x.IfIsType<double>(d => d.ToString("N2"));
+            });
+
+            HomeIs<HomeModel>();
+        }
+    }
+
+    public class NerdHtmlConventions : HtmlConventionRegistry
+    {
+        public NerdHtmlConventions()
+        {
+            Editors
+                .If(d => d.Accessor.InnerProperty.Name.EndsWith("itude"))
+                .Attr("type", "hidden");
         }
     }
 }

@@ -1,7 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  %>
-<%@ Import Namespace="FubuMVC.Core"%>
-<%@ Import Namespace="System.Web.Routing"%>
-<%@ Import Namespace="System.Linq"%>
 
 <script runat="server">
     // NOTE: This file exists solely to support F5-run support from Visual Studio
