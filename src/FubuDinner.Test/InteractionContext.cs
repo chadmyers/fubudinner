@@ -1,6 +1,9 @@
 using System;
+using FubuDinner.Web.Infrastructure;
+using FubuDinner.Web.Infrastructure.Validation;
 using NUnit.Framework;
 using Rhino.Mocks;
+using Rhino.Mocks.Constraints;
 using Rhino.Mocks.Interfaces;
 using StructureMap;
 using StructureMap.AutoMocking;
@@ -21,6 +24,15 @@ namespace FubuDinner.Test
         protected virtual void beforeEach()
         {
         }
+
+        public InMemoryRepository Repository { get; private set; }
+
+        public void UseInMemoryRepository()
+        {
+            Repository = new InMemoryRepository();
+            Services.Inject<IRepository>(Repository);
+        }
+
 
         public IContainer Container
         {
@@ -73,6 +85,20 @@ namespace FubuDinner.Test
         public IMethodOptions<R> MockFor<SERVICE, R>(Function<SERVICE, R> func) where SERVICE : class
         {
             return MockFor<SERVICE>().Expect(func);
+        }
+
+        public void ValidationSucceedsFor<ENTITY>()
+        {
+            MockFor<IValidator>().Stub(x => x.Validate(null))
+               .Return(Notification.Valid())
+               .Constraints(Is.TypeOf(typeof(ENTITY)));
+        }
+
+        public void ValidationFailsFor<ENTITY>()
+        {
+            MockFor<IValidator>().Stub(x => x.Validate(null))
+               .Return(Notification.Invalid())
+               .Constraints(Is.TypeOf(typeof(ENTITY)));
         }
     }
 }

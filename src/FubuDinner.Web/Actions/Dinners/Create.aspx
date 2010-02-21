@@ -8,6 +8,6 @@
 
     <h2>Host a Dinner</h2>
 
-    <% this.PartialFor(new DinnerFormModel{Dinner = Model.Dinner}); %>
+    <% this.Partial(new DinnerFormModel{Dinner = Model.Dinner}); %>
 
 </asp:Content>

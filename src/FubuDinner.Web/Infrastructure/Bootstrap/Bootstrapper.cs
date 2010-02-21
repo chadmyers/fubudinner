@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Web.Routing;
+using FubuDinner.Web.Infrastructure.Validation;
 using FubuMVC.Core.Runtime;
 using FubuDinner.Web.Infrastructure.Behaviors;
 using FubuMVC.StructureMap;
@@ -39,6 +40,7 @@ namespace FubuDinner.Web.Infrastructure.Bootstrap
 
                                          x.For<IDb4OConnection>().Use<Db4OConnection>();
                                          x.For<IRepository>().Use<Db4ORepository>();
+                                         x.For<IValidator>().Use<Validator>();
 
                                      });
 

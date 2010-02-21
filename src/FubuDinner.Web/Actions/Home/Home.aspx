@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Masthead" ContentPlaceHolderID="MastheadContent" runat="server">
-    <% this.PartialFor(new MastheadModel {ShowSearch = true}); %>
+    <% this.Partial(new MastheadModel {ShowSearch = true}); %>
 </asp:Content>
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">

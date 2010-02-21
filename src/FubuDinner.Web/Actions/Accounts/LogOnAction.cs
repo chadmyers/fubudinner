@@ -1,3 +1,4 @@
+using FubuDinner.Web.Infrastructure.Validation;
 using FubuMVC.Core.View;
 
 namespace FubuDinner.Web.Actions.Accounts
@@ -23,9 +24,9 @@ namespace FubuDinner.Web.Actions.Accounts
 
     public class LogOnModel
     {
-        /*[Required]*/
+        [Required]
         public string Username { get; set; }
-        /*[Required]*/
+        [Required]
         public string Password { get; set; }
         public bool rememberMe { get; set; }
         public string ReturnUrl { get; set; }

@@ -1,19 +1,44 @@
+using System;
+using FubuDinner.Web.Infrastructure;
+using FubuDinner.Web.Infrastructure.Validation;
+using FubuDinner.Web.Model;
 using FubuMVC.Core.View;
 
 namespace FubuDinner.Web.Actions.Accounts
 {
     public class RegisterAction
     {
-        public RegisterModel Query(RegisterModel input)
+        private readonly AccountSettings _settings;
+        private readonly IValidator _validator;
+        private readonly IRepository _repository;
+
+        public RegisterAction(AccountSettings settings, IValidator validator, IRepository repository)
         {
-            //TODO: This is all bogus placeholder and will get tossed and TDD'd
-            return new RegisterModel {PasswordLength = 6};
+            _settings = settings;
+            _validator = validator;
+            _repository = repository;
         }
 
-        public RegisterForm Command(RegisterForm input)
+        public RegisterModel Query(RegisterModel input)
         {
-            //TODO: This is all bogus placeholder and will get tossed and TDD'd
-            return input;
+            return new RegisterModel {PasswordLength = _settings.MinPasswordLength};
+        }
+
+        public RegisterModel Command(RegisterForm input)
+        {
+            var errors = _validator.Validate(input);
+
+            if( input.Nerd.Password != input.ConfirmPassword )
+            {
+                errors.RegisterFailure("ConfirmPassword", "Confirm password must match password exactly.");
+            }
+            
+            if( errors.IsValid())
+            {
+                _repository.Save(input.Nerd);
+            }
+
+            return new RegisterModel { Errors = errors, Nerd = input.Nerd, ConfirmPassword = input.ConfirmPassword };
         }
     }
 
@@ -25,13 +50,12 @@ namespace FubuDinner.Web.Actions.Accounts
     {
         public int PasswordLength { get; set; }
 
-        /*[Required]*/
-        public string Username { get; set; }
-        /*[Required]*/
-        public string Email { get; set; }
-        /*[Required]*/
-        public string Password { get; set; }
-        /*[Required]*/
+        public Notification Errors { get; set; }
+
+        [Required, ValidatedChild]
+        public Nerd Nerd { get; set; } 
+
+        [Required]
         public string ConfirmPassword { get; set; }
     }
 

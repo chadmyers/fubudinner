@@ -21,15 +21,15 @@
                 <legend>Account Information</legend>
                 <p>
                     <label for="username">Username:</label>
-                    <%= this.InputFor(m=>m.Username) %>
+                    <%= this.InputFor(m=>m.Nerd.Username) %>
                 </p>
                 <p>
                     <label for="email">Email:</label>
-                    <%= this.InputFor(m=>m.Email) %>
+                    <%= this.InputFor(m => m.Nerd.Email)%>
                 </p>
                 <p>
                     <label for="password">Password:</label>
-                    <%= this.InputFor(m=>m.Password) %>
+                    <%= this.InputFor(m => m.Nerd.Password)%>
                 </p>
                 <p>
                     <label for="confirmPassword">Confirm password:</label>

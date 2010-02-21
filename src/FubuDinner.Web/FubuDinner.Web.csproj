@@ -116,6 +116,7 @@
     <Compile Include="Actions\Shared\MastheadAction.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Infrastructure\AccountSettings.cs" />
     <Compile Include="Infrastructure\Bootstrap\Bootstrapper.cs" />
     <Compile Include="Infrastructure\Bootstrap\SettingsScanner.cs" />
     <Compile Include="Infrastructure\Behaviors\Db4OConnectionBehavior.cs" />
@@ -123,8 +124,19 @@
     <Compile Include="Infrastructure\Db4ORepository.cs" />
     <Compile Include="Infrastructure\IDb4OConnection.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\Validation\BagOfFail.cs" />
+    <Compile Include="Infrastructure\Validation\IValidated.cs" />
+    <Compile Include="Infrastructure\Validation\IValidator.cs" />
+    <Compile Include="Infrastructure\Validation\MaximumStringLengthAttribute.cs" />
+    <Compile Include="Infrastructure\Validation\Notification.cs" />
+    <Compile Include="Infrastructure\Validation\RequiredAttribute.cs" />
+    <Compile Include="Infrastructure\Validation\ValidatedChildAttribute.cs" />
+    <Compile Include="Infrastructure\Validation\ValidationAttribute.cs" />
+    <Compile Include="Infrastructure\Validation\ValidationFailure.cs" />
+    <Compile Include="Infrastructure\Validation\Validator.cs" />
     <Compile Include="Model\Dinner.cs" />
     <Compile Include="Model\Entity.cs" />
+    <Compile Include="Model\Nerd.cs" />
     <Compile Include="NerdDinnerPageExtensions.cs" />
     <Compile Include="WebRegistry.cs" />
     <Compile Include="Global.asax.cs">
