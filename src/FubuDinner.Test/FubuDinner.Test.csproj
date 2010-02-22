@@ -66,9 +66,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\AboutActionTester.cs" />
+    <Compile Include="Actions\LogOffActionTester.cs" />
     <Compile Include="Actions\HomeActionTester.cs" />
+    <Compile Include="Actions\LogOnActionTester.cs" />
     <Compile Include="Actions\MastheadActionTester.cs" />
     <Compile Include="Actions\RegisterActionTester.cs" />
+    <Compile Include="Infrastructure\Behaviors\MustBeAuthenticatedBehaviorTester.cs" />
     <Compile Include="InMemoryRepository.cs" />
     <Compile Include="InteractionContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

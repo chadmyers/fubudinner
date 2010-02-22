@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Cecil.FlowAnalysis, Version=0.1.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\db4o\Cecil.FlowAnalysis.dll</HintPath>
+    </Reference>
     <Reference Include="Db4objects.Db4o, Version=7.12.132.14217, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\db4o\Db4objects.Db4o.dll</HintPath>
@@ -117,6 +121,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Infrastructure\AccountSettings.cs" />
+    <Compile Include="Infrastructure\Behaviors\MustBeAuthenticatedBehavior.cs" />
     <Compile Include="Infrastructure\Bootstrap\Bootstrapper.cs" />
     <Compile Include="Infrastructure\Bootstrap\SettingsScanner.cs" />
     <Compile Include="Infrastructure\Behaviors\Db4OConnectionBehavior.cs" />

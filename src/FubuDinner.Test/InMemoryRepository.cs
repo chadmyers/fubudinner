@@ -55,7 +55,7 @@ namespace FubuDinner.Test
 
         public IQueryable<T> Find<T>(Expression<Func<T, bool>> where) where T : Entity
         {
-            throw new NotImplementedException();
+            return find<T>().Where(where);
         }
     }
 }

@@ -28,6 +28,8 @@ namespace FubuDinner.Web.Actions.Accounts
         {
             var errors = _validator.Validate(input);
 
+            //TODO: need unique username validation
+
             if( input.Nerd.Password != input.ConfirmPassword )
             {
                 errors.RegisterFailure("ConfirmPassword", "Confirm password must match password exactly.");

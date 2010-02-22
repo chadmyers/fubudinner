@@ -1,9 +1,10 @@
 using System;
+using FubuDinner.Web.Actions.Accounts;
+using FubuDinner.Web.Actions.Dinners;
+using FubuDinner.Web.Infrastructure.Behaviors;
 using FubuDinner.Web.Infrastructure.Validation;
-using FubuDinner.Web.Model;
 using FubuMVC.Core;
 using FubuDinner.Web.Actions.Home;
-using FubuDinner.Web.Infrastructure.Behaviors;
 using FubuMVC.UI;
 
 namespace FubuDinner.Web
@@ -27,7 +28,7 @@ namespace FubuDinner.Web
                 .IgnoreMethodSuffix("Query")
                 .ConstrainToHttpMethod(action => action.Method.Name.EndsWith("Command"), "POST")
                 .ConstrainToHttpMethod(action => action.Method.Name.StartsWith("Query"), "GET");
-
+            
             Views
                 .TryToAttach(x =>
                 {
@@ -47,6 +48,11 @@ namespace FubuDinner.Web
             });
 
             HomeIs<HomeModel>();
+
+            Policies
+                .ConditionallyWrapBehaviorChainsWith<MustBeAuthenticatedBehavior>(
+                    c => c.HandlerType.Namespace.Equals(typeof(DinnersAction).Namespace)
+                );
         }
     }
 

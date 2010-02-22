@@ -1,6 +1,7 @@
 using System;
 using FubuDinner.Web.Infrastructure;
 using FubuDinner.Web.Infrastructure.Validation;
+using FubuMVC.Core.Runtime;
 using NUnit.Framework;
 using Rhino.Mocks;
 using Rhino.Mocks.Constraints;
@@ -18,12 +19,16 @@ namespace FubuDinner.Test
         public void SetUp()
         {
             _services = new RhinoAutoMocker<T>(MockMode.AAA);
+            FubuRequest = new InMemoryFubuRequest();
+            _services.Inject<IFubuRequest>(FubuRequest);
             beforeEach();
         }
 
         protected virtual void beforeEach()
         {
         }
+
+        public InMemoryFubuRequest FubuRequest { get; private set; }
 
         public InMemoryRepository Repository { get; private set; }
 

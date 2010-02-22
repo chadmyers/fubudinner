@@ -11,7 +11,8 @@
     </p>
     <!-- Html.ValidationSummary() -->
 
-    <%= this.FormFor<LogOnModel>() %>
+    <%= this.FormFor<LogOnModelForm>() %>
+        <%= this.InputFor(m=>m.ReturnUrl).Attr("type", "hidden") %>
         <div>
             <fieldset>
                 <legend>Account Information</legend>
@@ -20,14 +21,14 @@
                     <%= this.InputFor(m=>m.Username) %>
                 </p>
                 <p>
-                    <label for="username">Password:</label>
+                    <label for="password">Password:</label>
                     <%= this.InputFor(m=>m.Password) %>
                 </p>
                 <p>
                     <%= this.InputFor(m=>m.rememberMe) %>
                     <label class="inline" for="rememberMe">Remember me?</label>
                 </p>
-                <p>
+                <p>                    
                     <input type="submit" value="Log On" />
                 </p>
             </fieldset>
