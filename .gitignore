@@ -6,7 +6,7 @@ deploy
 deploy/*
 build_output
 code_drop
-src/CommonAssemblyInfo.cs
+src/SolutionVersion.cs
 _ReSharper.*
 *.csproj.user
 *.resharper.user
