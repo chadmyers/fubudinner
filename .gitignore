@@ -4,6 +4,8 @@ obj
 bin
 deploy
 deploy/*
+build_output
+code_drop
 src/CommonAssemblyInfo.cs
 _ReSharper.*
 *.csproj.user
