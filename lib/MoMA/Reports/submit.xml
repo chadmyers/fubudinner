@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report version="1.0">
+  <metadata>
+    <definitions>Mono 2.4 (Revised)</definitions>
+    <momaversion>2.0.0.0</momaversion>
+    <date>2010-02-26 15:33:36Z</date>
+    <name />
+    <email />
+    <homepage />
+    <organization />
+    <comments />
+    <apptype />
+  </metadata>
+  <assemblies>
+    <assembly name="Cecil.FlowAnalysis.dll" version="0.1.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Db4objects.Db4o.dll" version="7.12.132.14217" runtime="2.0" todo="0" niex="1" miss="0" pinv="1">
+      <issue type="niex">
+        <class>RandomAccessFile</class>
+        <caller>void Sync()</caller>
+        <method>SafeFileHandle get_SafeFileHandle()</method>
+        <raw>Microsoft.Win32.SafeHandles.SafeFileHandle System.IO.FileStream::get_SafeFileHandle()</raw>
+      </issue>
+      <issue type="pinv">
+        <class>RandomAccessFile</class>
+        <caller>void Sync()</caller>
+        <method>int FlushFileBuffers(IntPtr)</method>
+        <raw>System.Int32 Sharpen.IO.RandomAccessFile::FlushFileBuffers(System.IntPtr)</raw>
+        <data>kernel32.dll</data>
+      </issue>
+    </assembly>
+    <assembly name="Db4objects.Db4o.Linq.dll" version="7.12.132.14217" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="FubuDinner.Web.dll" version="1.0.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="FubuMVC.Core.dll" version="0.1.0.0" runtime="2.0" todo="1" niex="0" miss="0" pinv="0">
+      <issue type="todo">
+        <class>ResolveConnectionStringFamily</class>
+        <caller>ConnectionStringSettings &lt;.cctor&gt;b__2(string)</caller>
+        <method>ConnectionStringSettingsCollection get_ConnectionStrings()</method>
+        <raw>System.Configuration.ConnectionStringSettingsCollection System.Configuration.ConfigurationManager::get_ConnectionStrings()</raw>
+        <data />
+      </issue>
+    </assembly>
+    <assembly name="FubuMVC.StructureMap.dll" version="0.0.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="FubuMVC.UI.dll" version="0.1.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="HtmlTags.dll" version="0.1.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Microsoft.Practices.ServiceLocation.dll" version="1.0.0.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="Mono.Cecil.dll" version="0.6.9.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="StructureMap.AutoMocking.dll" version="2.6.2.0" runtime="2.0" todo="0" niex="0" miss="0" pinv="0" />
+    <assembly name="StructureMap.dll" version="2.6.2.0" runtime="2.0" todo="1" niex="0" miss="0" pinv="0">
+      <issue type="todo">
+        <class>Doctor</class>
+        <caller>DoctorReport RunReport()</caller>
+        <method>AppDomain CreateDomain(string, Evidence, AppDomainSetup)</method>
+        <raw>System.AppDomain System.AppDomain::CreateDomain(System.String,System.Security.Policy.Evidence,System.AppDomainSetup)</raw>
+        <data>Currently it does not allow the setup in the other domain</data>
+      </issue>
+    </assembly>
+  </assemblies>
+</report>

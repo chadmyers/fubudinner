@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\Development\fubudinner\build_output\FubuDinner\FubuDinner.Test.dll" total="25" failures="0" not-run="0" date="2010-02-26" time="03:33:27">
+  <environment nunit-version="2.2.8.0" clr-version="2.0.50727.3603" os-version="Microsoft Windows NT 6.0.6001 Service Pack 1" platform="Win32NT" cwd="E:\Development\fubudinner" machine-name="DRU-2008" user="dru" user-domain="DRU-2008" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="E:\Development\fubudinner\build_output\FubuDinner\FubuDinner.Test.dll" success="True" time="1.042" asserts="0">
+    <results>
+      <test-suite name="FubuDinner" success="True" time="1.037" asserts="0">
+        <results>
+          <test-suite name="FubuDinner.Test" success="True" time="1.033" asserts="0">
+            <results>
+              <test-suite name="FubuDinner.Test.Actions" success="True" time="0.867" asserts="0">
+                <results>
+                  <test-suite name="FubuDinner.Test.Actions.AboutActionTester" success="True" time="0.014" asserts="0">
+                    <results>
+                      <test-case name="FubuDinner.Test.Actions.AboutActionTester.should_return_model" executed="True" success="True" time="0.010" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="FubuDinner.Test.Actions.LogOffActionTester" success="True" time="0.555" asserts="0">
+                    <results>
+                      <test-case name="FubuDinner.Test.Actions.LogOffActionTester.should_log_user_out_of_auth_context" executed="True" success="True" time="0.552" asserts="0" />
+                      <test-case name="FubuDinner.Test.Actions.LogOffActionTester.should_redirect_to_home_page" executed="True" success="True" time="0.003" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="FubuDinner.Test.Actions.HomeActionTester" success="True" time="0.001" asserts="0">
+                    <results>
+                      <test-case name="FubuDinner.Test.Actions.HomeActionTester.should_return_model" executed="True" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="FubuDinner.Test.Actions.LogOnActionQueryTester" success="True" time="0.003" asserts="0">
+                    <results>
+                      <test-case name="FubuDinner.Test.Actions.LogOnActionQueryTester.should_return_return_url_from_input" executed="True" success="True" time="0.003" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="FubuDinner.Test.Actions.log_on_validation_fails" success="True" time="0.211" asserts="0">
+                    <results>
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_fails.should_transfer_to_view_if_validation_fails" executed="True" success="True" time="0.186" asserts="1" />
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_fails.should_set_validation_errors_on_model_if_validation_fails" executed="True" success="True" time="0.008" asserts="1" />
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_fails.should_copy_form_values_to_output" executed="True" success="True" time="0.008" asserts="3" />
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_fails.should_not_copy_password_to_output" executed="True" success="True" time="0.008" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="FubuDinner.Test.Actions.log_on_validation_succeeds" success="True" time="0.050" asserts="0">
+                    <results>
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_succeeds.should_transfer_to_view_with_errors_if_username_not_found" executed="True" success="True" time="0.014" asserts="1" />
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_succeeds.should_transfer_to_view_with_errors_if_password_invalid" executed="True" success="True" time="0.008" asserts="1" />
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_succeeds.should_redirect_to_return_url" executed="True" success="True" time="0.009" asserts="0" />
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_succeeds.should_redirect_to_home_if_no_return_url_specified" executed="True" success="True" time="0.006" asserts="1" />
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_succeeds.should_set_authentication_context" executed="True" success="True" time="0.006" asserts="0" />
+                      <test-case name="FubuDinner.Test.Actions.log_on_validation_succeeds.should_set_rememberMe_setting_on_authentication_context" executed="True" success="True" time="0.007" asserts="0" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="FubuDinner.Test.Actions.MastheadActionTester" success="True" time="0.001" asserts="0">
+                    <results>
+                      <test-case name="FubuDinner.Test.Actions.MastheadActionTester.should_default_to_not_displaying_the_search_area" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="FubuDinner.Test.Actions.MastheadActionTester.should_respect_switch_for_showing_search_area" executed="True" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="FubuDinner.Test.Actions.RegisterActionQueryTester" success="True" time="0.003" asserts="0">
+                    <results>
+                      <test-case name="FubuDinner.Test.Actions.RegisterActionQueryTester.should_use_configured_min_password_length" executed="True" success="True" time="0.003" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="FubuDinner.Test.Actions.RegisterActionCommandTester" success="True" time="0.022" asserts="0">
+                    <results>
+                      <test-case name="FubuDinner.Test.Actions.RegisterActionCommandTester.validation_failure_should_be_reported" executed="True" success="True" time="0.013" asserts="1" />
+                      <test-case name="FubuDinner.Test.Actions.RegisterActionCommandTester.should_fail_validation_if_password_and_confirm_password_do_not_match" executed="True" success="True" time="0.002" asserts="1" />
+                      <test-case name="FubuDinner.Test.Actions.RegisterActionCommandTester.should_not_save_nerd_if_there_are_any_validation_errors" executed="True" success="True" time="0.005" asserts="1" />
+                      <test-case name="FubuDinner.Test.Actions.RegisterActionCommandTester.should_save_nerd_if_validation_succeeds" executed="True" success="True" time="0.003" asserts="1" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite name="FubuDinner.Test.Infrastructure" success="True" time="0.161" asserts="0">
+                <results>
+                  <test-suite name="FubuDinner.Test.Infrastructure.Behaviors" success="True" time="0.161" asserts="0">
+                    <results>
+                      <test-suite name="FubuDinner.Test.Infrastructure.Behaviors.MustBeAuthenticatedBehaviorTester" success="True" time="0.160" asserts="0">
+                        <results>
+                          <test-case name="FubuDinner.Test.Infrastructure.Behaviors.MustBeAuthenticatedBehaviorTester.should_not_continue_if_not_authenticated" executed="True" success="True" time="0.127" asserts="0" />
+                          <test-case name="FubuDinner.Test.Infrastructure.Behaviors.MustBeAuthenticatedBehaviorTester.should_transfer_to_logon_if_not_authenticated" executed="True" success="True" time="0.015" asserts="0" />
+                          <test-case name="FubuDinner.Test.Infrastructure.Behaviors.MustBeAuthenticatedBehaviorTester.should_remember_return_url_when_transferring" executed="True" success="True" time="0.018" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
