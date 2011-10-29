@@ -191,7 +191,7 @@ a[target="_replace"] {
 }
 
 /************************************************************************************************/
-    
+
 body > .dialog {
     top: 0;
     width: 100%;
@@ -344,7 +344,7 @@ fieldset > .row:last-child {
     top: -1px;
     left: -1px;
     width: 40px;
-    height: 28px;    
+    height: 28px;
     border: 1px solid #888888;
     -webkit-border-radius: 6px;
     background: #ffffff url(thumb.png) repeat-x;

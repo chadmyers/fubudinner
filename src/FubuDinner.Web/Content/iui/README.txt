@@ -4,7 +4,7 @@ README.txt
 
    To install and use iUI, follow the instructions on the iUI Project Wiki:
    http://code.google.com/p/iui/wiki/Introduction
-          
+
 See also
 
    NOTICE.txt  - iUI credits and copyright notices
